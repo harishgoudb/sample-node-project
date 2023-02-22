@@ -23,4 +23,9 @@ steps:
     sourceRepo: 'deepti-npm'
     threads: '1'
     buildName: '$(Build.DefinitionName)'
+- task: JFrogNpm@1
+  inputs:
+    command: 'install'
+    artifactoryConnection: 'clouddse-token'
+    sourceRepo: 'dinesh-npm'
     buildNumber: '$(Build.BuildNumber)'
