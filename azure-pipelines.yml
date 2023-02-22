@@ -14,8 +14,8 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'artifactory-v2'
-    sourceRepo: 'deepti-remote'
+    artifactoryConnection: 'v2-hts'
+    sourceRepo: 'anusha-virtual'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
