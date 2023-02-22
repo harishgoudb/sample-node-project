@@ -10,17 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JFrogNpm@1
-  inputs:
-    command: 'ci'
-    artifactoryConnection: 'artifactory-v2'
-    sourceRepo: 'deepti-npm'
 
 - task: JFrogNpm@1
   inputs:
     command: 'install'
     artifactoryConnection: 'artifactory-v2'
-    sourceRepo: 'deepti-npm'
+    sourceRepo: 'deepti-remote'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
