@@ -9,6 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 steps:
+- task: JFrogToolsInstaller@1
+  inputs:
+    artifactoryConnection: 'hts2v2artifactory'
+    cliInstallationRepo: 'jfrog-cli-v2-new'
+    installCustomVersion: true
+    cliVersion: '2.34.2'
 - task: JFrogNpm@1
   inputs:
     command: 'install'
