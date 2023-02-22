@@ -13,7 +13,7 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'clouddse-token'
+    artifactoryConnection: 'clouddse-identity'
     sourceRepo: 'anusha-test-npm'
     collectBuildInfo: true
     threads: '1'
