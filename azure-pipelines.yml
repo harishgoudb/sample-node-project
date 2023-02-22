@@ -14,13 +14,10 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'clouddse-arti'
+    artifactoryConnection: 'artifactory-v2'
     sourceRepo: 'deepti-npm'
+    collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
-- task: JFrogNpm@1
-  inputs:
-    command: 'install'
-    artifactoryConnection: 'clouddse-token'
-    sourceRepo: 'dinesh-npm'
     buildNumber: '$(Build.BuildNumber)'
+    includeEnvVars: true
