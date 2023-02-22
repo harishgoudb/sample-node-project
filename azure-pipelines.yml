@@ -14,7 +14,7 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'v2-hts'
+    artifactoryConnection: 'hts2-platform'
     sourceRepo: 'anusha-virtual'
     collectBuildInfo: true
     threads: '1'
