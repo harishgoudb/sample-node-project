@@ -11,13 +11,13 @@ pool:
 
 steps:
 
+
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'hts2-platform'
+    artifactoryConnection: 'v2-hts'
     sourceRepo: 'anusha-virtual'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
