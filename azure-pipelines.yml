@@ -10,6 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JFrogNpm@1
+  inputs:
+    command: 'ci'
+    artifactoryConnection: 'artifactory-v2'
+    sourceRepo: 'deepti-npm'
 
 - task: JFrogNpm@1
   inputs:
