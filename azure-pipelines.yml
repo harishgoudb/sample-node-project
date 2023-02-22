@@ -10,12 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JFrogNpm@1
-  inputs:
-    command: 'install'
-    artifactoryConnection: 'clouddse-identity'
-    sourceRepo: 'anusha-test-npm'
-    collectBuildInfo: true
+
 - task: JFrogNpm@1
   inputs:
     command: 'install'
