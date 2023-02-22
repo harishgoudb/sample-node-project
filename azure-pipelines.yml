@@ -8,5 +8,13 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
 steps:
+- task: JFrogNpm@1
+  inputs:
+    command: 'install'
+    artifactoryConnection: 'hts2v2artifactory'
+    sourceRepo: 'ca-npm'
+    collectBuildInfo: true
+    threads: '1'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
