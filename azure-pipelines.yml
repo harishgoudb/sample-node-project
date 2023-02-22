@@ -16,6 +16,11 @@ steps:
     artifactoryConnection: 'clouddse-identity'
     sourceRepo: 'anusha-test-npm'
     collectBuildInfo: true
+- task: JFrogNpm@1
+  inputs:
+    command: 'install'
+    artifactoryConnection: 'clouddse-arti'
+    sourceRepo: 'deepti-npm'
     threads: '1'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
